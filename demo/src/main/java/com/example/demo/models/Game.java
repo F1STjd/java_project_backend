@@ -20,7 +20,7 @@ import com.example.demo.utils.RouletteColor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "game")
+@Table
 public class Game {
 
     @Id
