@@ -1,0 +1,48 @@
+### Test Authentication Endpoints
+
+### 1. Register New User
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "testuser@example.com",
+  "password": "password123"
+}
+
+### 2. Login with Username
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "usernameOrEmail": "testuser",
+  "password": "password123"
+}
+
+### 3. Login with Email
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "usernameOrEmail": "testuser@example.com",
+  "password": "password123"
+}
+
+### 4. Example: Register with Validation Errors
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "ab",
+  "email": "invalid-email",
+  "password": "123"
+}
+
+### 5. Example: Login with Wrong Credentials
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "usernameOrEmail": "testuser",
+  "password": "wrongpassword"
+}

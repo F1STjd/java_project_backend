@@ -42,6 +42,12 @@ public class Game {
     private String spinSeed;
 
     @Column
+    private String resultHash;
+
+    @Column
+    private String resultKey;
+
+    @Column
     private LocalDateTime bettingTimeStart;
 
     @Column
